@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Josefin Sans", serif;
+  background-color: hsl(235, 21%, 11%);
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 350px;
+  z-index: -1;
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 30px;
+  margin-top: 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.new-todo {
+  display: flex;
+  background-color: hsl(235, 24%, 19%);
+  height: 70px;
+  border-radius: 6px;
+}
+
+.first-item {
+  display: flex;
+  flex-direction: row;
+  gap: 180px;
+}
+.check {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkmark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid hsl(237, 14%, 26%);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkmark img {
+  visibility: hidden;
+}
+
+.checkmark.checked img,
+.checkmark:hover img {
+  visibility: visible;
+}
+
+.todo-text.checked {
+  text-decoration: line-through;
+  color: hsl(233, 14%, 35%);
+}
+
+.checkmark:hover,
+.checkmark.checked {
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.new-todo-input {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.new-todo-input form {
+  flex-grow: 1;
+}
+
+.new-todo-input input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: hsl(234, 39%, 85%);
+  font-size: 18px;
+  padding: 10px 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.new-todo-input input::placeholder {
+  color: hsl(233, 14%, 35%);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.todo-items-wapper {
+  margin-top: 30px;
+  background-color: hsl(235, 24%, 19%);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.todo-item {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  align-items: center;
+  background-color: hsl(235, 24%, 19%);
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  font-size: 18px;
+  color: hsl(234, 39%, 85%);
+  cursor: pointer;
+}
+
+.todo-item:hover {
+  transform: translateX(-2px);
+  box-shadow: 0px 0px 7px 0px hsl(235, 21%, 11%);
+  border-color: hsl(235, 24%, 19%);
+}
+
+.todo-text {
+  display: flex;
+  align-items: center;
+}
+
+.todo-items-info {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  color: hsl(234, 14%, 35%);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.items-status {
+  display: flex;
+  justify-content: center;
+}
+
+.items-status span {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.items-status span:hover,
+.items-status span.active,
+.items-clear:hover {
+  color: hsl(220, 98%, 61%);
+}
+
+.items-clear {
+  cursor: pointer;
+  text-align: end;
+}
+
+/* Light Theme Styles */
+body.light-theme {
+  background-color: hsl(0, 0%, 98%);
+}
+
+body.light-theme .todo-items-wapper,
+body.light-theme .todo-item,
+body.light-theme .new-todo {
+  background-color: hsl(0, 0%, 100%);
+}
+
+body.light-theme .todo-item {
+  border-bottom: 1px solid hsl(236, 33%, 92%);
+}
+
+body.light-theme .todo-text {
+  color: hsl(235, 19%, 35%);
+}
+
+body.light-theme .todo-text.checked {
+  color: hsl(233, 11%, 84%);
+}
+
+body.light-theme .new-todo-input input {
+  color: hsl(235, 19%, 35%);
+}
+
+body.light-theme .new-todo-input input::placeholder {
+  color: hsl(236, 9%, 61%);
+}
+
+body.light-theme .todo-items-info {
+  color: hsl(236, 9%, 61%);
+}
+
+body.light-theme .todo-item:hover {
+  box-shadow: 0px 0px 7px 0px hsl(236, 33%, 92%);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 700px) {
+  .items-status {
+    position: absolute;
+    /* display: flex; */
+    /* flex-direction: column; */
+    left: 0;
+    right: 0;
+
+    bottom: 1px;
+    height: 70px;
+    background-color: hsl(235, 24%, 19%);
+    margin: 0 30px;
+    border-radius: 6px;
+  }
+  .items-status p {
+    margin-top: 25px;
+  }
+
+  .first-item {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  body.light-theme .items-status {
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .container {
+    /* margin-bottom: 100px; */
+  }
+}
+
+/* @media screen and (max-width: 320px) {
+  .container {
+    margin-bottom: 20px;
+  }
+} */
