@@ -11,9 +11,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Load Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore-compat.js"></script>
-    <script src="firebase.js"></script>
+
+    <!-- Load Firebase Configuration File -->
+    <script src="firebase.js" defer></script>
+
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="background-image">
@@ -29,9 +35,7 @@
       </div>
       <div class="new-todo">
         <div class="check">
-          <div class="checkmark">
-            <!-- Leave empty for now -->
-          </div>
+          <div class="checkmark"></div>
         </div>
         <div class="new-todo-input">
           <form id="todo-form">
@@ -45,44 +49,7 @@
       </div>
 
       <div class="todo-items-wapper">
-        <div class="todo-items">
-          <!-- <div class="todo-item">
-              <div class="check">
-                  <div class="checkmark">
-                      <img src="./images/icon-check.svg" alt="">
-                  </div>
-              </div>
-
-              <div class="todo-text">
-                  Complete online JavaScript course
-              </div>
-            </div>
-
-            <div class="todo-item">
-              <div class="check">
-                  <div class="checkmark">
-                      <img src="./images/icon-check.svg" alt="">
-                  </div>
-              </div>
-
-              <div class="todo-text">
-                  Complete online JavaScript course
-              </div>
-            </div>  
-
-              <div class="todo-item">
-                <div class="check">
-                    <div class="checkmark">
-                        <img src="./images/icon-check.svg" alt="">
-                    </div>
-                </div>
-  
-                <div class="todo-text">
-                    Jogg around the park 3x
-                </div>
-              </div> -->
-        </div>
-
+        <div class="todo-items"></div>
         <div class="todo-items-info">
           <div class="items-left">5 items left</div>
           <div class="items-status">
@@ -94,16 +61,5 @@
         </div>
       </div>
     </div>
-
-    <!-- <script src="script.js"></script> -->
-    <!-- First load Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore-compat.js"></script>
-
-    <!-- Then load your Firebase configuration -->
-    <script src="firebase.js"></script>
-
-    <!-- Finally load your main script -->
-    <script src="script.js"></script>
   </body>
 </html>
