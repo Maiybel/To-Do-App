@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"></script>
-    <!-- <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore-compat.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore-compat.js"></script>
     <script src="firebase.js"></script>
   </head>
   <body>
@@ -84,24 +84,26 @@
         </div>
 
         <div class="todo-items-info">
-          <div class="first-item">
-            <div class="items-left">5 items left</div>
-            <div class="items-clear">Clear Completed</div>
-          </div>
+          <div class="items-left">5 items left</div>
           <div class="items-status">
             <p><span class="active">All</span></p>
             <p><span>Active</span></p>
             <p><span>Completed</span></p>
           </div>
+          <div class="items-clear">Clear Completed</div>
         </div>
       </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <!-- First load Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore-compat.js"></script>
 
-    <script src="firebase-config.js"></script>
+    <!-- Then load your Firebase configuration -->
+    <script src="firebase.js"></script>
 
+    <!-- Finally load your main script -->
     <script src="script.js"></script>
   </body>
 </html>

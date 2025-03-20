@@ -54,11 +54,6 @@ body {
   border-radius: 6px;
 }
 
-.first-item {
-  display: flex;
-  flex-direction: row;
-  gap: 180px;
-}
 .check {
   width: 70px;
   display: flex;
@@ -228,12 +223,10 @@ body.light-theme .todo-item:hover {
 @media screen and (max-width: 700px) {
   .items-status {
     position: absolute;
-    /* display: flex; */
-    /* flex-direction: column; */
     left: 0;
     right: 0;
 
-    bottom: 1px;
+    bottom: 80px;
     height: 70px;
     background-color: hsl(235, 24%, 19%);
     margin: 0 30px;
@@ -243,14 +236,12 @@ body.light-theme .todo-item:hover {
     margin-top: 25px;
   }
 
-  .first-item {
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-  }
-
   body.light-theme .items-status {
     background-color: hsl(0, 0%, 100%);
+  }
+
+  .container {
+    margin-bottom: 100px;
   }
 }
 
