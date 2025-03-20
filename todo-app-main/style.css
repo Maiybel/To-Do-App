@@ -252,10 +252,6 @@ body.light-theme .todo-item:hover {
   body.light-theme .items-status {
     background-color: hsl(0, 0%, 100%);
   }
-
-  .container {
-    /* margin-bottom: 100px; */
-  }
 }
 
 /* @media screen and (max-width: 320px) {
