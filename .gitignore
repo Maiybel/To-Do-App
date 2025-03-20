@@ -15,4 +15,4 @@
 .DS_Store
 .prettierignore
 .env
-.firebase.js
+firebase.js
